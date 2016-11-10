@@ -6,7 +6,8 @@ var exercises = [
   {name: "Name Calculator", folder: "nameCalculator"},
   {name: "First Filter App", folder: "firstFilterApp"},
   {name: "Advanced Filter App", folder: "advancedFilters"},
-  {name: "ng-repeat", folder: "ng-repeat"}
+  {name: "ng-repeat", folder: "ng-repeat"},
+  {name: "filter filter", folder: "filterFilter"}
 ];
 
 angular.module('NgRepeatApp', [])
