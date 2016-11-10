@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+          <meta charset="utf-8" />
+          <script src="../angular.min.js"></script>
+          <script src="app.js"></script>
+          <title>Coursera Angular - ng-repeat</title>
+  </head>
+  <body ng-app="NgRepeatApp">
+    <h1>ng-repeat</h1>
+    <div ng-controller="NgRepeatAppController">
+      Here is a list of letters created with ng-repeat
+      <ul>
+        <li ng-repeat="letter in letters">{{ letter }} has the index {{$index}}</li>
+      </ul>
+    </div>
+  </body>
+</html>
