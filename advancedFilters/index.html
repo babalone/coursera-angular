@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+          <meta charset="utf-8" />
+          <script src="angular.min.js"></script>
+          <script src="app.js"></script>
+          <title>Coursera Angular - Advanced Filter App</title>
+  </head>
+  <body ng-app="FilterApp">
+    <h1>Advanced Filter App</h1>
+    <div ng-controller="FilterAppController">
+      Enter some text:
+      <input type="text"
+        ng-model="input">
+        <br>
+        {{input | my}}
+        <br>
+        {{input | my : "blub_" }}
+        <br>
+        {{input | my : "blub_" : "_bla"}}
+    </div>
+  </body>
+</html>

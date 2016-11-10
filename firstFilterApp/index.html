@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+          <meta charset="utf-8" />
+          <script src="angular.min.js"></script>
+          <script src="app.js"></script>
+          <title>Coursera Angular - First Filter App</title>
+  </head>
+  <body ng-app="FilterApp">
+    <h1>First Filter App</h1>
+    <div ng-controller="FilterAppController">
+      Enter some number:
+      <input type="text"
+        ng-model="number"
+        ng-keyup="updateOutput()"><br>
+        Currency Filter: {{number | currency : '€' : 2}}
+        <br>
+        MyFilter as HTML-expression: {{number | my }}
+        <br>
+        MyFilter as javascript-code using filter directly: {{output}}
+        <br>
+        MyFilter as javascript-code using filter-service: {{output2}}
+    </div>
+  </body>
+</html>
