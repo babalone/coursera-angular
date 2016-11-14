@@ -5,16 +5,15 @@
           <meta charset="utf-8" />
           <script src="../angular.min.js"></script>
           <script src="app.js"></script>
-          <title>Coursera Angular - nested controller</title>
+          <title>Coursera Angular - nested controllers</title>
   </head>
   <body ng-app="NestedApp">
-    <h1>filter filter</h1>
-    The filter 'filter' applied to some list of items that is created using ng-repeat.
+    <h1>nested controllers</h1>
+      Not much to show here. Just a bit playing around with nesting controllers.
+      Some stuff is logged to console to observe what is happening when
+      nesting controllers.
     <div ng-controller="NestedAppParentController">
       <div ng-controller="NestedAppChildController">
-        Not much to show here. Just a bit playing around with nesting controllers.
-        Some stuff is logged to console to observe what is happening when
-        nesting controllers.
       </div>
     </div>
   </body>
