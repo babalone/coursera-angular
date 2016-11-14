@@ -12,8 +12,11 @@
       Not much to show here. Just a bit playing around with nesting controllers.
       Some stuff is logged to console to observe what is happening when
       nesting controllers.
-    <div ng-controller="NestedAppParentController">
-      <div ng-controller="NestedAppChildController">
+    <div ng-controller="NestedAppParentController as parent">
+      Parent value: {{ parent.value }}
+      <div ng-controller="NestedAppChildController as child">
+        Child value: {{ child.value }}
+        Parent value: {{ parent.value }}
       </div>
     </div>
   </body>
