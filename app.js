@@ -8,7 +8,8 @@ var exercises = [
   {name: "Advanced Filter App", folder: "advancedFilters"},
   {name: "ng-repeat", folder: "ng-repeat"},
   {name: "filter filter", folder: "filterFilter"},
-  {name: "nesting controllerster", folder: "nestingControllers"}
+  {name: "nesting controllerster", folder: "nestingControllers"},
+  {name: "custom services", folder: "customServices"}
 ];
 
 angular.module('NgRepeatApp', [])
