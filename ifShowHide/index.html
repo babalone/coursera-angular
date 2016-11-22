@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+          <meta charset="utf-8" />
+          <script src="../angular.min.js"></script>
+          <script src="app.js"></script>
+          <title>Coursera Angular - if, show, hide</title>
+  </head>
+  <body ng-app="IfShowHideApp">
+    <h1>ng-if, ng-show, ng-hide</h1>
+      This is an example-app to show how those features work
+
+    <div ng-controller="IfShowHideAppController">
+      <input type="text" ng-model="someText"></input>
+      <br>
+      Text in the field is: "{{ someText }}"
+      <br>
+      <div ng-if="someText">This element is only part of the DOM if there is text in the field.</div>
+      <div ng-show="someText">This text is always in the DOM but hidden if there <u>is no</u> text in the field.</div>
+      <div ng-hide="someText">This text is always in the DOM but hidden if there <u>is</u> text in the field.</div>
+    </div>
+  </body>
+</html>
