@@ -4,7 +4,7 @@
 angular.module('Assignment2App', [])
        .controller('Assignment2BuyController', Assignment2BuyController)
        .controller('Assignment2BoughtController', Assignment2BoughtController)
-       .service('ShoppingListService', ShoppingListService);
+       .service('ShoppingListCheckOffService', ShoppingListCheckOffService);
 
 var shoppingList = [
   { name: "cookies", quantity: 10, bought: false },
@@ -14,21 +14,21 @@ var shoppingList = [
   { name: "water", quantity: 50, bought: false }
 ];
 
-Assignment2BuyController.$inject = ["ShoppingListService"];
-function Assignment2BuyController(ShoppingListService){
-        this.shoppingList = ShoppingListService.getItemsToBuy();
+Assignment2BuyController.$inject = ["ShoppingListCheckOffService"];
+function Assignment2BuyController(ShoppingListCheckOffService){
+        this.shoppingList = ShoppingListCheckOffService.getItemsToBuy();
 
         this.buyItem = function(index){
-          ShoppingListService.buyItem(index);
+          ShoppingListCheckOffService.buyItem(index);
         }
 };
 
-Assignment2BoughtController.$inject = ["ShoppingListService"];
-function Assignment2BoughtController(ShoppingListService){
-        this.shoppingList = ShoppingListService.getItemsBought();
+Assignment2BoughtController.$inject = ["ShoppingListCheckOffService"];
+function Assignment2BoughtController(ShoppingListCheckOffService){
+        this.shoppingList = ShoppingListCheckOffService.getItemsBought();
 };
 
-function ShoppingListService(){
+function ShoppingListCheckOffService(){
         var itemsToBuy = shoppingList;
         var itemsBought = [];
 
